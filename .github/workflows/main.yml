@@ -70,7 +70,7 @@ jobs:
       run: |
         aws deploy create-deployment \
         --application-name deploy \
-        --deployment-group-name coinTalk-group \
+        --deployment-group-name deploy-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=cointalk-deploy],bundleType=zip,key=deploy.zip \ 
+        --s3-location bucket=deploy-deploy],bundleType=zip,key=deploy.zip \ 
         --region ap-northeast-2
