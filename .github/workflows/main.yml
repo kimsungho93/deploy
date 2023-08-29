@@ -68,9 +68,9 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
-        aws deploy create-deployment
-        --application-name deploy
-        --deployment-group-name deploy-group
+        aws deploy create-deployment \
+        --application-name deploy \
+        --deployment-group-name coinTalk-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=deploy-deploy, bundleType=zip,key=deploy.zip
+        --s3-location bucket=cointalk-deploy],bundleType=zip,key=deploy.zip \ 
         --region ap-northeast-2
